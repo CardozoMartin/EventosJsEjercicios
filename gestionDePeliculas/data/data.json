@@ -1,0 +1,56 @@
+[
+  {
+    "id": 1,
+    "titulo": "Cars",
+    "Genero": "infantil,autos",
+    "Creador": "Pixar, disney",
+    "duracion": "1:30",
+    "descripcion":"Ambientada en un mundo poblado enteramente por autos parlantes antropomórficos y otros vehículos, sigue a un auto de carrera novato que, de camino a la carrera más importante de su vida, se queda varado en un centro de la ciudad y aprende un par de cosas sobre la amistad, la familia y las cosas de la vida por las que ...",
+    "imagen": "https://es.web.img2.acsta.net/pictures/14/05/28/11/24/435900.jpg"
+  },
+  {
+    "id": 2,
+    "titulo": "Shrek",
+    "Genero": "infantil,fantasia",
+    "Creador": "DreanWorks",
+    "duracion": "1:40",
+    "descripcion":"Shrek es un gran ogro verde que vive en un pantano. Allí reside felizmente, asustando a los humanos que se aventuran o se pierden, hasta que un día descubre que el lugar ha sido invadido por personajes de cuentos de hadas que han sido expulsados de la comarca por el villano Lord Farquaad.",
+    "imagen": "https://www.lavanguardia.com/peliculas-series/images/movie/poster/2001/5/w1280/zUKYjBNBr2JecOC71tHZ9C83ojb.jpg"
+  },
+  {
+    "id": 3,
+    "titulo": "Monsters Inc.",
+    "Genero": "Infantil,Monstruos",
+    "Creador": "Pixar, disney",
+    "duracion": "1:10",
+    "descripcion":"Monsters, Inc. es la mayor empresa de miedo del mundo de los monstruos y James P. Sullivan es uno de sus mejores Asustadores. Sullivan es un imponente personaje recubierto de piel azul con lunares de color violeta que luce dos cuernos, y al que sus amigos llaman Sulley.",
+    "imagen": "https://mx.web.img3.acsta.net/c_310_420/pictures/19/06/17/16/48/5870818.jpg"
+  },
+  {
+    "id": 4,
+    "titulo": "Monsters University.",
+    "Genero": "Infantil,Monstruos",
+    "Creador": "Pixar, disney",
+    "duracion": "1:50",
+    "descripcion":"El Profesor Knight enseña Sustos 101, el curso preparatorio de la carrera de Sustos en Monstruos University. Con cientos de nuevos estudiantes de Sustos, el Profesor Knight debe separar a los débiles de los que tienen talento e identificar a quienes demuestran mayor potencial para ser auténticos Asustadores.",
+    "imagen": "https://images-na.ssl-images-amazon.com/images/S/pv-target-images/34234207b87f68f1d1742ae236d5496f6706f97ebb61b467ac86522e597ca005._RI_TTW_.jpg"
+  },{
+    "id": 5,
+    "titulo": "Monsters University.",
+    "Genero": "Infantil,Monstruos",
+    "Creador": "Pixar, disney",
+    "duracion": "1:50",
+    "descripcion":"El Profesor Knight enseña Sustos 101, el curso preparatorio de la carrera de Sustos en Monstruos University. Con cientos de nuevos estudiantes de Sustos, el Profesor Knight debe separar a los débiles de los que tienen talento e identificar a quienes demuestran mayor potencial para ser auténticos Asustadores.",
+    "imagen": "https://images-na.ssl-images-amazon.com/images/S/pv-target-images/34234207b87f68f1d1742ae236d5496f6706f97ebb61b467ac86522e597ca005._RI_TTW_.jpg"
+  }
+  ,{
+    "id": 5,
+    "titulo": "Monsters University.",
+    "Genero": "Infantil,Monstruos",
+    "Creador": "Pixar, disney",
+    "duracion": "1:50",
+    "descripcion":"El Profesor Knight enseña Sustos 101, el curso preparatorio de la carrera de Sustos en Monstruos University. Con cientos de nuevos estudiantes de Sustos, el Profesor Knight debe separar a los débiles de los que tienen talento e identificar a quienes demuestran mayor potencial para ser auténticos Asustadores.",
+    "imagen": "https://images-na.ssl-images-amazon.com/images/S/pv-target-images/34234207b87f68f1d1742ae236d5496f6706f97ebb61b467ac86522e597ca005._RI_TTW_.jpg"
+  }
+  
+]
