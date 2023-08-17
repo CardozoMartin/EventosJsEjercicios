@@ -1,5 +1,6 @@
 import peli from "../data/data.json" assert { type: "json" };
 
+
 const tarjeta = document.querySelector("#cuerpo-tarjeta");
 
 /*const mostrarPelicula = () => {
@@ -36,46 +37,6 @@ const tarjeta = document.querySelector("#cuerpo-tarjeta");
 
 //mostrarPelicula();
 
-const buscar = document.getElementById('buscar');
-
-buscar.addEventListener('click',(nombre)=>{
-  event.preventDefault();
-  const peliculaNombre = peli.find((item) => {
-    return item.titulo.toLowerCase() === titulo.toLowerCase();
-  });
-
-  if (!peliculaNombre) {
-    alert('No existe el contacto buscado');
-  } else {
-    const peliculaEncontrada = document.createElement("div");
-    peliculaEncontrada.classList = "col mb-5";
-    const tarj = `
-            <div class="card h-100">
-            <!-- Product image-->
-            <img class="card-img-top" src=${item.imagen}
-                alt=${item.titulo} />
-            <!-- Product details-->
-            <div class="card-body p-4">
-                <div class="text-center">
-                    <!-- Product name-->
-                    <h5 class="fw-bolder">${item.titulo}</h5>
-                    <!-- Product price-->
-                    $40.00 - $80.00
-                </div>
-            </div>
-            <!-- Product actions-->
-            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">View
-                        options</a></div>
-            </div>
-        </div>
-            `;
-            peliculaEncontrada.innerHTML = tarj;
-            tarjeta.append(peliculaEncontrada);
-    
-  }
-
-})
 
 //paginacion
 
@@ -88,7 +49,7 @@ let arreglo = peli.slice(desde,limite);
 
 
 
-const cargarPeliculas = ()=>{
+const cargarPeliculas = (arreglo)=>{
   tarjeta.innerHTML = "";
   arreglo.forEach((item)=>{
     const fila = document.createElement("div");
@@ -144,4 +105,26 @@ if(desde <= peli.length){
 }
 }
 
-cargarPeliculas();
+
+
+
+//filtro de busqueda
+/*document.addEventListener('keyup',e=>{
+  if(e.target.matches('#nombreBusqueda')){
+    document.querySelectorAll('#cuerpo-tarjeta').forEach(item =>{
+      console.log(item.textContent.toLowerCase().includes(e.target.value))
+      //? item.classList.remove('filtro')
+      //:item.classList.add('filtro')
+    })
+  }
+})*/
+
+const filtroInput = document.getElementById("filtro");
+
+filtroInput.addEventListener("input", () => {
+  const filtro = filtroInput.value.toLowerCase();
+  const peliculasFiltradas = peli.filter(pelicula => pelicula.titulo.toLowerCase().includes(filtro));
+  cargarPeliculas(peliculasFiltradas);
+});
+
+cargarPeliculas(peli);
