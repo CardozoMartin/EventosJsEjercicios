@@ -13,7 +13,7 @@ const cargarTabla = () => {
         <td>$${item.precio}</td>
         <div class="d-flex gap-2">
         <button class="btn btn-outline-warning" ><i class="bi bi-pencil-square"></i></button>
-        <button class="btn btn-outline-danger" class="btnEliminar"><i class="bi bi-x-square"></i></button>
+        <button class="btn btn-outline-danger" class="btnEliminar" onClick="borrarGift(${item.id})"><i class="bi bi-x-square"></i></button>
 
 
 
