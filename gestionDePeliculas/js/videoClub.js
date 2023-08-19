@@ -1,6 +1,5 @@
 import peli from "../data/data.json" assert { type: "json" };
 
-
 const tarjeta = document.querySelector("#cuerpo-tarjeta");
 
 /*const mostrarPelicula = () => {
@@ -37,24 +36,21 @@ const tarjeta = document.querySelector("#cuerpo-tarjeta");
 
 //mostrarPelicula();
 
-
 //paginacion
 
 let limite = 12;
 let desde = 0;
-let paginas = peli.length / limite ;
+let paginas = peli.length / limite;
 let paginaActiva = 1;
 
-let arreglo = peli.slice(desde,limite);
+let arreglo = peli.slice(desde, limite);
 
-
-
-const cargarPeliculas = (arreglo)=>{
+const cargarPeliculas = (arregloPeliculas) => {
   tarjeta.innerHTML = "";
-  arreglo.forEach((item)=>{
+  arregloPeliculas.forEach((item) => {
     const fila = document.createElement("div");
     fila.classList = "col mb-5";
-    fila.setAttribute('key',item.id);
+    fila.setAttribute("key", item.id);
     const tarj = `
             <div class="card h-100">
             <!-- Product image-->
@@ -74,16 +70,14 @@ const cargarPeliculas = (arreglo)=>{
             </div>
         </div>
             `;
-            fila.innerHTML = tarj;
-            tarjeta.append(fila);
+    fila.innerHTML = tarj;
+    tarjeta.append(fila);
   });
   cargarPaginaDePeliculas();
-}
+};
 
-const cargarPaginaDePeliculas = ()=>{
-  
-    
-    document.querySelector("#items").innerHTML = "";
+const cargarPaginaDePeliculas = () => {
+  document.querySelector("#items").innerHTML = "";
   for (let index = 0; index < paginas; index++) {
     const item = document.createElement("li");
     item.classList = `page-item ${paginaActiva == index + 1 ? "active" : ""}`;
@@ -92,21 +86,17 @@ const cargarPaginaDePeliculas = ()=>{
     }</button>`;
     item.innerHTML = enlace;
     document.querySelector("#items").append(item);
-    
   }
 };
 
-window.pasarPagina = (pagina)=>{
-paginaActiva = pagina + 1;
-desde = limite * pagina;
-if(desde <= peli.length){
-  arreglo = peli.slice(desde,limite*paginaActiva);
-  cargarPeliculas();
-}
-}
-
-
-
+window.pasarPagina = (pagina) => {
+  paginaActiva = pagina + 1;
+  desde = limite * pagina;
+  if (desde <= peli.length) {
+    arreglo = peli.slice(desde, limite * paginaActiva);
+    cargarPeliculas();
+  }
+};
 
 //filtro de busqueda
 /*document.addEventListener('keyup',e=>{
@@ -123,7 +113,9 @@ const filtroInput = document.getElementById("filtro");
 
 filtroInput.addEventListener("input", () => {
   const filtro = filtroInput.value.toLowerCase();
-  const peliculasFiltradas = peli.filter(pelicula => pelicula.titulo.toLowerCase().includes(filtro));
+  const peliculasFiltradas = peli.filter((pelicula) =>
+    pelicula.titulo.toLowerCase().includes(filtro)
+  );
   cargarPeliculas(peliculasFiltradas);
 });
 
