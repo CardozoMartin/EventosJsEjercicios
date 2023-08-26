@@ -4,28 +4,59 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registrarse</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
 </head>
-<body>
-    <section>
-        <h2>Registro</h2>
-        <form id="registroForm">
-            <fieldset>
-                <label>Nombre</label>
-                <input type="Nombre" id="inputNombre" placeholder="juan pablo" required autofocus>
-            </fieldset>
-            <fieldset>
-                <label>Email</label>
-                <input type="email" id="inputEmail" placeholder="example@gmail.com" required autofocus>
-            </fieldset>
-            <fieldset>
-                <label >contraseña</label>
-                <input type="password" placeholder="Ingrese su contraseña" id="inputContrasenia" required>
-            </fieldset>
-            <input type="submit" value="Registrarse">
-        </form>
-        <p>ya tienes cuenta ? <a href="./iniciar.html">Inicio</a></p>
-    </section>
+<body >
+    <main class="mx-auto container">
+        <section class=" d-flex justify-content-center align-items-center min-vh-100 mx-auto">
+         
+        <article>
+            <div class="header-text mb-2">
+                <h2>Bievenido</h2>
+                
+              </div>
+            <form id="registroForm" class="row border rounded-5 p-3 bg-white shadow box-area w-75">
+                <fieldset>
+                    <label class="form-label fw-bolder">Nombre</label>
+                    <input class="form-control form-control-lg bg-light fs-6" type="Nombre" id="inputNombre" placeholder="juan pablo" required autofocus minlength="6" maxlength="20">
+                    <div class="invalid-feedback">Ingrese tu nombre</div>
+                </fieldset>
+                <fieldset>
+                    <label class="form-label fw-bolder">Email</label>
+                    <input class="form-control form-control-lg bg-light fs-6" type="email" id="inputEmail" placeholder="example@gmail.com" required autofocus min="8" maxlength="30">
+                    <div class="invalid-feedback">Ingrese tu email</div>
+                </fieldset>
+                <fieldset>
+                    <label class="form-label fw-bolder" >contraseña</label>
+                    <input class="form-control form-control-lg bg-light fs-6" type="password" placeholder="Ingrese su contraseña" id="inputContrasenia" required minlength="8" maxlength="20">
+                   
+                    <div class="invalid-feedback">Ingrese tu contraseña</div>
+                     <input type="checkbox" id="verContraseña" class="form-check-input" id="formCheck" required><p class="d-inline-block g-1 ms-3 fw-bolder">Ver contraseña</p>
+                </fieldset>
+                
+                <fieldset>
+<input type="checkbox" class="form-check-input" id="formCheck" required>
+                <label for="formCheck" class="form-check-label text-secondary" for="validationCustom01"><small>Acepto
+                    los terminos y condiciones</small></label>
+                </fieldset>
+                <div class="text-center mt-3"><input class="btn btn-success w-25 text-center" type="submit" value="Registrarse">
+                <p>ya tienes cuenta ? <a href="./iniciar.html">Inicio</a></p></div>
+                
+            </form>
+            
 
-    <script src="../admin/registrarse.js"></script>
+        </article>
+       
+        
+        
+    </section></main>
+    
+
+    <script type="module" src="../admin/registrarse.js"></script>
 </body>
 </html>

@@ -1,4 +1,14 @@
 const inicioForm = document.getElementById('inicioForm');
+const verContraseña = document.getElementById('verContraseña');
+const contrasenia = document.getElementById('inputContrasenia');
+
+verContraseña.addEventListener('click',()=>{
+    if(contrasenia.type === "password"){
+        contrasenia.type = "text"
+    }else{
+        contrasenia.type ="password"
+    }
+})
 
 inicioForm.addEventListener('submit',(e)=>{
 e.preventDefault();
